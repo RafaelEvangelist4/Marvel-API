@@ -1,5 +1,6 @@
 import './App.css';
 import Header from "./components/Header"
+import CharacterTable from "./components/CharacterTable"
 import axios from "axios"
 import React , {useEffect,useState} from "react"
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="container">
         <Header />
+        <CharacterTable items={items} isLoading={isLoading} />
     </div>
   );
 }
