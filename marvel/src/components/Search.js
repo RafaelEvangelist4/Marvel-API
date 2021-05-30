@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
 const Search = ({search}) => {
-  const [text,setText] = useState("")
+  const[text,setText] = useState("")
 
-  const onSearch = (q)=>{
+  const onSearch= (q)=>{
     setText(q)
     search(q)
   }
