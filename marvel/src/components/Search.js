@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 const Search = ({search}) => {
-  const[text,setText] = useState("")
+  const [text,setText] = useState("")
 
   const onSearch= (q)=>{
     setText(q)
@@ -11,7 +11,7 @@ const Search = ({search}) => {
   return (
     <section className = "search">
       <form>
-        <input type = "text"
+        <input type = "text"  style={{color: 'white'}}
         className = "form-control"
         placeholder = "Encontre um herói"
         autoFocus

@@ -1,11 +1,6 @@
 import React from 'react'
 
 const CharacterItem = ({item}) => {
-    const favorite = (item)=>{
-      var previousData = JSON.parse(localStorage.getItem('favorites'))
-      previousData.push(item)
-      localStorage.setItem('favorites',JSON.stringify(previousData))
-    }
 
   return (
       <div className = "content">
@@ -21,9 +16,6 @@ const CharacterItem = ({item}) => {
         </li>
         <li>
           <strong>Description:</strong> {item.description}
-        </li>
-        <li>
-          <button type="button" onClick={()=>favorite(item)}>Favorito</button>
         </li>
       </ul>
    </div>

@@ -15,27 +15,19 @@ function App() {
   useEffect(()=>{
       const fetch = async()=>{
         if(query===""){
-          if(localStorage.getItem('favorites')==='[]' || !localStorage.getItem('favorites')){
-            localStorage.setItem('favorites', '[]')
-            const result = await axios(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=1e06e4a444f5a1990886ddbd0a78ac84&hash=${hash}`)
-            console.log(result.data.data.results)
-            setItems(result.data.data.results)
-            setLoading(false)
-          }else{
-            let favorite = JSON.parse(localStorage.getItem('favorites'))
-            setItems(favorite)
-            setLoading(false)
-          }
-
+          const result = await axios(`http://gateway.marvel.com/v1/public/characters?ts=1&apikey=1e06e4a444f5a1990886ddbd0a78ac84&hash=${hash}`)
+          console.log(result.data.data.results)
+          setItems(result.data.data.results)
+          setLoading(false)
         }else{
           const result = await axios(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=1&apikey=1e06e4a444f5a1990886ddbd0a78ac84&hash=${hash}`)
           console.log(result.data.data.results)
           setItems(result.data.data.results)
           setLoading(false)
-      }
-      
-    }
+        }
 
+   }
+        
     fetch()
   },[query])
 
