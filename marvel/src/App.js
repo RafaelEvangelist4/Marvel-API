@@ -28,7 +28,7 @@ function App() {
           }
 
         }else{
-          const result = await axios(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}ts=1&apikey=1e06e4a444f5a1990886ddbd0a78ac84&hash=${hash}`)
+          const result = await axios(`http://gateway.marvel.com/v1/public/characters?nameStartsWith=${query}&ts=1&apikey=1e06e4a444f5a1990886ddbd0a78ac84&hash=${hash}`)
           console.log(result.data.data.results)
           setItems(result.data.data.results)
           setLoading(false)

@@ -15,17 +15,17 @@ const CharacterItem = ({item}) => {
     </div>
     <div className = "content-back">
       <h1>{item.name}</h1>
-    <ul>
-      <li>
-        <strong>Name:</strong> {item.name}
-      </li>
-      <li>
-        <strong>Description:</strong> {item.description}
-      </li>
-      <li>
-        <button type="button" onClick={()=>favorite(item)}>Favorite</button>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <strong>Name:</strong> {item.name}
+        </li>
+        <li>
+          <strong>Description:</strong> {item.description}
+        </li>
+        <li>
+          <button type="button" onClick={()=>favorite(item)}>Favorito</button>
+        </li>
+      </ul>
    </div>
   </div>
 </div>
